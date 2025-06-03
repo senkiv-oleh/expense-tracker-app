@@ -1,0 +1,17 @@
+{
+  "terminal.integrated.suggest.enabled": true,
+  "editor.colorDecoratorsActivatedOn": "hover",
+  "editor.defaultColorDecorators": "always",
+  "editor.colorDecorators": true,
+  "editor.tokenColorCustomizations": {
+  "textMateRules": [
+    {
+      "scope": "constant.other.color",
+      "settings": {
+        "foreground": "#ff0000"
+      }
+    }
+  ]
+}
+
+}
