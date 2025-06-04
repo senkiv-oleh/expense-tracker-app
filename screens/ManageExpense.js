@@ -5,7 +5,7 @@ import { GlobalStyles } from '../constants/styles'
 import Button from '../conmponets/ui/Button'
 import { ExpensesContext } from '../store/expenses-context'
 
-function ManageExpense ({ route, navigation }) {
+const ManageExpense = ({ route, navigation }) => {
   const expensesCtx = useContext(ExpensesContext)
 
   const editedExpenseId = route.params?.expenseId
@@ -17,16 +17,16 @@ function ManageExpense ({ route, navigation }) {
     })
   }, [navigation, isEditing])
 
-  function deleteExpenseHandler () {
+  const deleteExpenseHandler = () => {
     expensesCtx.deleteExpense(editedExpenseId)
     navigation.goBack()
   }
 
-  function cancelExpenseHandler () {
+  const cancelExpenseHandler = () => {
     navigation.goBack()
   }
 
-  function confirmExpenseHandler () {
+  const confirmExpenseHandler = () => {
     if (isEditing) {
       expensesCtx.updateExpense(editedExpenseId, {
         description: 'TEST1',
@@ -40,6 +40,7 @@ function ManageExpense ({ route, navigation }) {
         date: new Date('2025-06-03')
       })
     }
+
     navigation.goBack()
   }
 

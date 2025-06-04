@@ -3,7 +3,7 @@ import ExpenseItem from './ExpenseItem'
 
 const renderExpenseItem = itemData => <ExpenseItem {...itemData.item} />
 
-function ExpensesList ({ expenses }) {
+const ExpensesList = ({ expenses }) => {
   return (
     <FlatList
       data={expenses}
