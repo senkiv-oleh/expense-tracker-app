@@ -3,10 +3,10 @@ import { useNavigation } from '@react-navigation/native'
 import { GlobalStyles } from '../../constants/styles'
 import { getFormattedDate } from '../../utils/date'
 
-function ExpenseItem ({ description, amount, date }) {
+function ExpenseItem ({ description, amount, date, id }) {
   const navigation = useNavigation()
 
-  const expensePressHandler = id => {
+  const expensePressHandler = () => {
     navigation.navigate('ManageExpense', {
       expenseId: id
     })
