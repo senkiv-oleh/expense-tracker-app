@@ -6,9 +6,10 @@ import { getFormattedDate } from '../../utils/date'
 function ExpenseItem ({ description, amount, date }) {
   const navigation = useNavigation()
 
-  const expensePressHandler = () => {
-    console.log('Pressed')
-    navigation.navigate('ManageExpense')
+  const expensePressHandler = id => {
+    navigation.navigate('ManageExpense', {
+      expenseId: id
+    })
   }
 
   return (
